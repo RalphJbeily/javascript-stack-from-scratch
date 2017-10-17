@@ -15,7 +15,12 @@
     "test":
       "yarn lint && jest --coverage && codecov --token=82fb4784-9108-4ccc-bbd5-32ee7780d6fa",
     "precommit": "yarn test",
-    "prepush": "yarn test && yarn prod:build"
+    "prepush": "yarn test && yarn prod:build",
+    "heroku-postbuild": "yarn prod:build"
+  },
+  "engines": {
+    "node": "8.6.0",
+    "yarn": "1.1.0"
   },
   "browserslist": ["> 1%"],
   "devDependencies": {
